@@ -1,0 +1,23 @@
+html, body {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    overflow: hidden;
+}
+
+.rug {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(209, 140, 12);
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 100px;
+    top: 80px;
+    height: 145px;
+    width: 114px;
+    background: url(./images/rug.png);
+    user-select: none;
+}
+

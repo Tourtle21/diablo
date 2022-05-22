@@ -1,0 +1,331 @@
+* {
+    user-select: none;
+}
+html, body {
+    /* width: 2000px;
+    height: 2000px; */
+    background: blue;
+    margin: 0;
+    overflow: hidden;
+}
+body {
+    /* position: fixed;
+    box-sizing: border-box;
+    margin: 0; */
+    overflow: hidden;
+    /* background-color: black;
+    width: 100vh;
+    height: 100vh;
+    margin: auto;
+    z-index: -1;
+    left: calc(50vh); */
+}
+#gameBoard {
+    position: absolute;
+    background-color: red;
+    display: none;
+    z-index: -1;
+    /* overflow: scroll; */
+}
+.classContainer {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.classContainer:nth-child(2) {
+    height: 75px;
+}
+.classContainer:nth-child(3) {
+    height: 80px;
+}
+.rug {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(209, 140, 12);
+    font-weight: bold;
+    font-size: 1.2em;
+    position: absolute;
+    left: 100px;
+    top: 80px;
+    height: 145px;
+    width: 114px;
+    background: url(rug.png);
+    user-select: none;
+}
+#playerHouse {
+    height: 400px;
+    width: 400px;
+    background-color: green;
+    position: absolute;
+    left: 25200px;
+    top: 25002px;
+}
+#store {
+    height: 500px;
+    width: 1000px;
+    background-color:grey;
+    position: absolute;
+    left:24100px;
+    top: 25000px;
+}
+.door, .outsideDoor {
+    position: absolute;
+    height: 20px;
+    width: 80px;
+    background-color: transparent;
+    left: 150px;
+}
+.outsideDoor {
+   background-color: yellow;
+   top: -20px;
+}
+.bed {
+    position: absolute;
+    left: 10px;
+    top: 270px;
+    height: 123px;
+    width: 240px;
+    background: url(bed.png);
+    background-size: 100%;
+}
+
+
+.desk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+    width: 80px;
+    background-color:saddlebrown;
+    position: absolute;
+    left: 320px;
+    top: 40px;
+}
+.mage {
+    box-sizing: border-box;
+    height: 45px;
+    width: 30px;
+    background: url(wizard.png);
+    background-size: 100%;
+    position: absolute;
+}
+.rogue {
+    box-sizing: border-box;
+    height: 50px;
+    width: 50px;
+    background: url(displaybow.png);
+    background-size: 100%;
+    position: absolute;
+    bottom: 20px;
+}
+.berserker {
+    box-sizing: border-box;
+    height: 54px;
+    width: 60px;
+    background: url(sword.png);
+    background-size: 100%;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 60px;
+}
+#rug-name {
+    font-size: 0.9em;
+}
+#player {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: tan;
+    position: absolute;
+}
+.enemy {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+}
+#mainMenu {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3px;
+    border: 3px solid grey;
+    width: 80%;
+    height: 300px;
+    background-color: green;
+}
+.container h1 {
+    margin-bottom: 50px;
+    color: greenyellow;
+}
+.types {
+    margin-top: 30px;
+    display: flex;
+}
+.types button {
+    height: 100px;
+    width: 100px;
+    background-color: grey;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    color: yellow;
+    cursor: pointer;
+    outline: none;
+}
+.types button:focus {
+    background-color: green;
+}
+
+.healthbar {
+    width: 80%;
+    height: 20px;
+    background-color: grey;
+    z-index: -1;
+    position: fixed;
+    bottom: 50px;
+    left: 10%;
+}
+.innerHealth {
+    width: 0%;
+    height: 100%;
+    background-color: red;
+}
+#bow {
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: -25px;
+    top: -25px;
+    background: url(./weapons/Bow_of_light.png);
+    background-size: 100% 50%;
+    background-position: 0px 4px;
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+}
+#sword {
+    height: 150px;
+    width: 150px;
+    position: relative;
+    left: -50px;
+    top: -50px;
+    background: url(./weapons/pink_Sword.png);
+    background-size: 55%;
+    background-position: 70px 5px;
+    background-repeat: no-repeat;
+    transform: rotate(0deg);
+}
+#arrow {
+    position: relative;
+    top: -20px;
+    height: 40px;
+    width: 5px;
+    background: white;
+    margin: auto;
+}
+.arrow {
+    position: absolute;
+    height: 40px;
+    width: 5px;
+    background: grey;
+}
+#fireball {
+    background-color: orange;
+    position: absolute;
+    border-radius: 50%;
+}
+#pet {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    overflow: visible;
+}
+.wolf {
+    background-image: url(wolf.png);
+    padding-top: 10px;
+    padding-bottom: 14px;
+    height: 50px;
+    background-position: 0px 0px;
+    position: relative;
+    top: -14px;
+}
+.dragon {
+    height: 52px;
+    width: 68px;
+    background: url(dragon.png);
+    background-position: 1px 0px;
+    padding-bottom: 18px;
+    position: relative;
+    background-size: 67px;
+    top: -12px;
+    left: -10px;
+}
+.porcupine {
+    height: 64px;
+    width: 58px;
+    background: url(porcupine.png);
+    background-position: 1px 0px;
+    position: relative;
+    top: -4px;
+    left: -4px;
+}
+/* border-right: 35px solid transparent; */
+.wall-bottom {
+    border-bottom: 35px solid transparent;
+}
+.wall-right {
+    border-right: 25px solid transparent;
+}
+.grid {
+    height: 2000px;
+    width: 2000px;
+    position: absolute;
+    box-sizing: border-box;
+    padding: 5px;
+    border-image: url(wall.png) 25 round;
+    border-image-repeat: repeat;
+    border-image-slice: -10;
+}
+#outside {
+    display: none;
+}
+.enemy {
+    height: 50px;
+    width: 50px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+#healthbar {
+    position: fixed;
+    height: 100px;
+    width: 100px;
+    margin-left: 50px;
+    margin-top: 50px;
+    border-radius: 50%;
+    border: 10px solid grey;
+    overflow: hidden;
+    /* background-color: grey; */
+}
+#innerHealth {
+    position: relative;
+    top: 0px;
+    height: 100px;
+    width: 100px;
+    border: 10px solid transparent;
+    background-color: red;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='style.css' rel='stylesheet' />
+</head>
+<body>
+    <div id='mainMenu'>
+        <div class='container'>
+            <h1>Teamgame.io</h1>
+            <div>
+                <input id='name' maxlength='8' placeholder='Character First Name' />
+                <button id='start'>Start</button>
+            </div>
+            <!-- <div class='types'>
+                <button class='type'>Mage</button>
+                <button class='type'>Berserker</button>
+                <button class='type'>Rogue</button>
+            </div> -->
+        </div>
+    </div>
+    <div id='gameBoard'>
+        <div id='house'>
+            <div class='rug'><span id='rug-name'>Oliver's</span><span class='rug-house'>House</span></div>
+            <div class='desk'>
+                <div class='classContainer'><div class='mage'></div></div>
+                <div class='classContainer'><div class='berserker'></div></div>
+                <div class='classContainer'><div class='rogue'></div></div>
+            </div>
+            <div class='door'></div>
+            <div class='bed'></div>
+        </div>
+        <div id='outside'>
+            <div id='playerHouse'>
+                <div class='outsideDoor'></div>
+            </div>
+            <div id='store'>
+
+            </div>
+        </div>
+        <div id='player'></div>
+        <div id='pet'></div>
+    </div>
+    <div id='healthbar'><div id='innerHealth'></div></div>
+    <script src='pet.js'></script>
+    <script src='enemies.js'></script>
+    <script src='mage.js'></script>
+    <script src='berserker.js'></script>
+    <script src='rogue.js'></script>
+    <script src='functions.js'></script>
+    <script src='script.js'></script>
+</body>
+</html>

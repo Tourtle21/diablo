@@ -1,0 +1,2 @@
+drawMaps();
+createPlayer();
